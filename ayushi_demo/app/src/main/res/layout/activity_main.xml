@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    tools:context=".Activity.MainActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        android:background="#ededed"
+        android:layout_marginBottom="50dp"
+        android:divider="#fff"
+
+        ></ListView>
+
+
+
+
+    <!-- Message box -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_box">
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_alignParentBottom="true"
+                 android:background="#ffffff">
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:hint="Type your Name"
+                     android:id="@+id/edit_messagebox"
+                     android:layout_alignParentBottom="true"
+
+                     android:layout_weight=".7"
+                     ></EditText>
+
+                 <Button
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Submit"
+                     android:id="@+id/btn_submit"
+                     android:textColor="#b5b3b3"
+                     android:layout_alignParentRight="true"
+                     android:layout_alignParentBottom="true"
+                     android:background="#00FFFFFF"></Button>
+
+             </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvAnimals"
+        android:visibility="gone"
+        android:rotationY="180"
+        android:layout_alignParentBottom="true"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+</RelativeLayout>
