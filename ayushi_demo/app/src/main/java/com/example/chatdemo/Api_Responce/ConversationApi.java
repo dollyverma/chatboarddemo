@@ -5,18 +5,18 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.List;
 
-public class conversation_api  implements Serializable
+public class ConversationApi implements Serializable
 {
 
     @SerializedName("message")
     public String message;
 
-    public List<conversation_api.message_convo_list> getmessageConvoList_function()
+    public List<ConversationApi.message_convo_list> getmessageConvoList_function()
     {
         return obj_messageConvoList;
     }
 
-    public List<conversation_api.question_list> getquestion_list_function()
+    public List<ConversationApi.question_list> getquestion_list_function()
     {
         return obj_question_list;
     }
@@ -24,6 +24,7 @@ public class conversation_api  implements Serializable
 
     @SerializedName("flag")
     public String Flag_user_type;
+
 
 
     @SerializedName("message_convo")
@@ -65,6 +66,22 @@ public class conversation_api  implements Serializable
 
         @SerializedName("type")
         public String type;
+
+
+        public String getEnd_flag()
+        {
+            return end_flag;
+        }
+
+        public void setEnd_flag(String end_flag)
+        {
+            this.end_flag = end_flag;
+        }
+
+        @SerializedName("end_flag")
+        public String end_flag;
+
+
 
     }
 

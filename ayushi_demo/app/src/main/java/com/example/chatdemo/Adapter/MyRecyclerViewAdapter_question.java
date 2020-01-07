@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.volley.NetworkError;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.example.chatdemo.Models.question_model;
+import com.example.chatdemo.Models.QuestionModel;
 import com.example.chatdemo.R;
 
 import java.util.List;
@@ -22,18 +22,18 @@ public class MyRecyclerViewAdapter_question extends RecyclerView.Adapter<MyRecyc
 private List<String> mData;
 
     private static final int FOOTER_VIEW = 1;
-    List<question_model> DataObject  ;
+    List<QuestionModel> DataObject  ;
 
 private LayoutInflater mInflater;
 
 Context context ;
-    question_model item ;
+    QuestionModel item ;
 
-    private MyRecyclerViewAdapter.ItemClickListener mClickListener;
+    private MyRecyclerViewAdapter_demo.ItemClickListener mClickListener;
 
 
         // data is passed into the constructor
-        public MyRecyclerViewAdapter_question(Context context, List<question_model> DataObject  ) {
+        public MyRecyclerViewAdapter_question(Context context, List<QuestionModel> DataObject  ) {
 
         this.mInflater = LayoutInflater.from(context);
         this.DataObject = DataObject;
@@ -163,7 +163,7 @@ public class ViewHolder extends RecyclerView.ViewHolder  implements View.OnClick
 
 
     // allows clicks events to be caught
-    public void setClickListener(MyRecyclerViewAdapter.ItemClickListener itemClickListener) {
+    public void setClickListener(MyRecyclerViewAdapter_demo.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
