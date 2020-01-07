@@ -1,4 +1,4 @@
-package com.example.chatdemo.network_library;
+package com.example.chatdemo.NetworkLibrary;
 
 import android.content.Context;
 

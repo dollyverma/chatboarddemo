@@ -2,7 +2,7 @@ package com.example.chatdemo.Constants;
 
 import android.provider.SyncStateContract;
 
-public class keyvalue
+public class KeyValue
 {
 
     public static final String Key_Okay = "Okay!"      ;

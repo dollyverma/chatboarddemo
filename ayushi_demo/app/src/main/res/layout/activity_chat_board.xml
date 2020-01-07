@@ -4,12 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ChatBoard">
+    tools:context=".Activity.ChatBoardActivity">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/their_message"
+        android:paddingLeft="5dp"
+        android:padding="15dp"
+
+        android:layout_margin="5dp"
+        android:id="@+id/frameLayout_dots">
+
+        <com.example.chatdemo.HorizontalDottedProgress   android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            >
+
+        </com.example.chatdemo.HorizontalDottedProgress>
+    </FrameLayout>
 
 
 
 
-       <androidx.recyclerview.widget.RecyclerView
+    
+
+
+    <androidx.recyclerview.widget.RecyclerView
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:id="@+id/recycleview_customer_service"
@@ -23,14 +45,12 @@
 
 
 
-   
-
-
     <!-- Message box -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/message_box">
+        android:visibility="gone"
+        android:id="@+id/relativeLayout_message_box">
 
 
         <LinearLayout
@@ -53,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Submit"
-                android:id="@+id/btn_submit"
+                android:id="@+id/button_submit"
                 android:textColor="#b5b3b3"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"

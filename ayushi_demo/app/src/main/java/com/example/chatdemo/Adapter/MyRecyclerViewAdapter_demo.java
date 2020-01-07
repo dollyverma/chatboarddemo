@@ -12,14 +12,14 @@ import com.example.chatdemo.R;
 
 import java.util.List;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
+public class MyRecyclerViewAdapter_demo extends RecyclerView.Adapter<MyRecyclerViewAdapter_demo.ViewHolder> {
 
 private List<String> mData;
 private LayoutInflater mInflater;
 private ItemClickListener mClickListener;
 
         // data is passed into the constructor
-        public MyRecyclerViewAdapter(Context context, List<String> data) {
+        public MyRecyclerViewAdapter_demo(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         }

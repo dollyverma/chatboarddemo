@@ -1,6 +1,6 @@
 package com.example.chatdemo.Models;
 
-public class Message_model
+public class MessageModel
 {
     public String getMessage()
     {
@@ -22,5 +22,18 @@ public class Message_model
         this.usertype = usertype;
     }
 
-    String message , usertype ;
+    String message;
+    String usertype;
+
+    public String getEnd_flag()
+    {
+        return end_flag;
+    }
+
+    public void setEnd_flag(String end_flag)
+    {
+        this.end_flag = end_flag;
+    }
+
+    String end_flag;
 }

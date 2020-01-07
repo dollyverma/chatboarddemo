@@ -1,6 +1,6 @@
 package com.example.chatdemo.Models;
 
-public class question_model
+public class QuestionModel
 {
 
     String  question  , questionid ;

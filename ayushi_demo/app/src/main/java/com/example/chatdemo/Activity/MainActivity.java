@@ -20,15 +20,15 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.example.chatdemo.Adapter.MyRecyclerViewAdapter;
+import com.example.chatdemo.Adapter.MyRecyclerViewAdapter_demo;
 import com.example.chatdemo.R;
 import com.example.chatdemo.Models.User;
 import com.example.chatdemo.Adapter.UsersAdapter;
-import com.example.chatdemo.Constants.keyvalue;
+import com.example.chatdemo.Constants.KeyValue;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAdapter.ItemClickListener
+public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAdapter_demo.ItemClickListener
 {
 
     RelativeLayout message_box  ;
@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
     String list_1 [] = {"Hello! I'm ACC." , "what's your name ?" } ;
     String list_2 [] = {"Great to meet you, " , "I can help you save regularly, without hassle." , "Lets start by setting a saving goals."} ;
 
-    MyRecyclerViewAdapter token_adapter;
+    MyRecyclerViewAdapter_demo token_adapter;
     RecyclerView recyclerView ;
 
     public int counter;
     FrameLayout dots ;
 
-    keyvalue key_ ;
+    KeyValue key_ ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
 
         lv = (ListView) findViewById(R.id.l1);
         edit_message_box = (EditText)findViewById(R.id.edit_messagebox);
-        Btn_submit = (Button)findViewById(R.id.btn_submit);
+        Btn_submit = (Button)findViewById(R.id.button_submit);
         message_box = (RelativeLayout)findViewById(R.id.message_box);
         recyclerView = findViewById(R.id.rvAnimals);
 
@@ -152,12 +152,12 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
 
     public void initialize()
     {
-        key_ = new keyvalue() ;
+        key_ = new KeyValue() ;
         arrayOfUsers = new ArrayList<User>();
         // Create the adapter to convert the array to views
         adapter = new UsersAdapter(this, arrayOfUsers);
 
-
+    
         count_down_timer("start");
 
 
@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(3 ,GridLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
-        token_adapter = new MyRecyclerViewAdapter(MainActivity.this, animalNames);
+        token_adapter = new MyRecyclerViewAdapter_demo(MainActivity.this, animalNames);
         token_adapter.setClickListener(MainActivity.this);
         recyclerView.setAdapter(token_adapter);
 
@@ -274,7 +274,7 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(3 ,GridLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
-        token_adapter = new MyRecyclerViewAdapter(MainActivity.this, animalNames);
+        token_adapter = new MyRecyclerViewAdapter_demo(MainActivity.this, animalNames);
         token_adapter.setClickListener(MainActivity.this);
         recyclerView.setAdapter(token_adapter);
     }
@@ -294,7 +294,7 @@ public class MainActivity extends AppCompatActivity  implements MyRecyclerViewAd
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2 ,GridLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
-        token_adapter = new MyRecyclerViewAdapter(MainActivity.this, animalNames2);
+        token_adapter = new MyRecyclerViewAdapter_demo(MainActivity.this, animalNames2);
         token_adapter.setClickListener(MainActivity.this);
         recyclerView.setAdapter(token_adapter);
 

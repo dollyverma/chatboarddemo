@@ -19,7 +19,7 @@
 
         android:textSize="@dimen/chatting_card_text_size"
        android:layout_alignParentLeft="true"
-        android:text="Placeholder message"
+        android:text="...."
         />
 
 
